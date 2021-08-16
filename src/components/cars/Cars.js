@@ -7,7 +7,7 @@ export default function Cars() {
 
     useEffect(()=>{
         getcars().then(value => setCars([...value]))
-    })
+    });
 
   return (
     <div>
