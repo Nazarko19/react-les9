@@ -10,8 +10,8 @@ export default function Cars() {
     });
 
   return (
-    <div>
-        {
+    <div className={'wrap'}>
+         {
             cars.map(value => <Car key={value.id} item={value}/>)
         }
     </div>

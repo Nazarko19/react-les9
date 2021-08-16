@@ -1,0 +1,13 @@
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px ;
+    justify-content: center;
+}
+
+.wrap >div{
+    width: 15%;
+    text-align: center;
+    background: seagreen;
+    margin: 5px 5px;
+}
