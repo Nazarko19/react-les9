@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {savecar} from "../../servis/save.car.servis";
+import {saveCar} from "../../servis/save.car.servis";
 
 
 export default function Form() {
@@ -16,7 +16,7 @@ export default function Form() {
         let car = {id,model,price,year}
         setformState({...car})
         console.log(car)
-        savecar(car)
+        saveCar(car)
 
     }
 
