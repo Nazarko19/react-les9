@@ -3,17 +3,16 @@ import {saveCar} from "../../servis/save.car.servis";
 
 
 export default function Form() {
-    let [id,setId] = useState('id')
     let [model,setModel]=useState('model')
     let [price,setPrice] = useState('price')
     let [year,setYear] = useState('year')
-    let [formState,setformState] = useState({id:'',model:'',price:'',year:''})
+    let [formState,setformState] = useState({model:'',price:'',year:''})
 
 
 
     const onSubmitform = (e) =>{
         e.preventDefault()
-        let car = {id,model,price,year}
+        let car = {model,price,year}
         setformState({...car})
         console.log(car)
         saveCar(car)
@@ -21,10 +20,7 @@ export default function Form() {
     }
 
 
-    let oninputid =(e) =>{
-      let Id=(e.target.value)
-        setId(Id)
-    }
+
     let oninputmodel =(e) =>{
        let Model=(e.target.value)
         setModel(Model)
@@ -42,7 +38,6 @@ export default function Form() {
     return (
     <div>
       <form className={'form'} onSubmit={onSubmitform}>
-        <input type="id" name={'id'} value={id} onInput={oninputid}/>
         <input type="model" name={'model'} value={model} onInput={oninputmodel}/>
         <input type="price" name={'price'} value={price} onInput={oninputprice}/>
         <input type="year" name={'year'} value={year} onInput={oninputyear}/>

@@ -1,7 +1,7 @@
-const saveCar = ({id,model,price,year}) => {
+const saveCar = ({model,price,year}) => {
     fetch('http://195.72.146.25/api/v1/cars', {
         method: 'POST',
-        body: JSON.stringify({id,model,price,year}),
+        body: JSON.stringify({model,price,year}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
