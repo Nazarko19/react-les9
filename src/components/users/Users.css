@@ -1,0 +1,10 @@
+.users{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.users>div{
+    width: 50%;
+}
