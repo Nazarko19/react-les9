@@ -6,6 +6,7 @@ import {
 
 
 } from "react-router-dom";
+
 export default function User({item,history}) {
   const navigaTor = () => {
     history.push(`/users/${item.id}`)

@@ -18,6 +18,6 @@ const getPosts = () => {
 
 const getPost = (id) => {
   return fetch(url2 +'/'+ id)
-      .then(value => value.json)
+      .then(value => value.json())
 }
 export {getUsers,getUser,getPosts,getPost}
