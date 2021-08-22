@@ -14,7 +14,7 @@ export default function UserDeteilApp(props) {
     <div>
       {
 
-      user.map(value=> <Userdeailcomp item={value}/>)
+      user.map(value=> <Userdeailcomp item={value}/>);
       }
 
     </div>
