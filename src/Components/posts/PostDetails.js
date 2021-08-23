@@ -7,15 +7,9 @@ export default function PostDetails(props) {
 
   return (
       <div>
-        {
-            JSON.stringify(state)
-        }
+          {state.title}
+
       </div>
   )
-
-
-
-
-
 
 }

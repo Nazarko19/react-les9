@@ -14,7 +14,6 @@ export default function User({item,history}) {
   return (
     <div>
       {item.name} - <button onClick={navigaTor}>go to details</button>
-      {/*{`/users/${item.id}`}*/}
 
     </div>
   );
