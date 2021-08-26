@@ -1,5 +1,4 @@
-import {useEffect, useState} from "react";
-import {getPost} from "../../servises/users.servis";
+
 
 export default function PostDetails(props) {
 
@@ -7,7 +6,9 @@ export default function PostDetails(props) {
 
   return (
       <div>
-          {state.title}
+
+          <h2>{state.id}-{state.title}</h2>
+          <ul><li>{state.body}</li></ul>
 
       </div>
   )
