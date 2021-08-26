@@ -16,10 +16,10 @@ export default function UserDeteilApp(props) {
         <h2>{user.name}-{user.username}</h2>
         <h3>{user.email}</h3>
         <ul>Address:
-          <li>{user.address.street}</li>
-          <li>{user.address.suite}</li>
-          <li>{user.address.city}</li>
-          <li>{user.address.zipcode}</li>
+          {/*<li>{user.address.street}</li>*/}
+          {/*<li>{user.address.suite}</li>*/}
+          {/*<li>{user.address.city}</li>*/}
+          {/*<li>{user.address.zipcode}</li>*/}
         </ul>
 
 
