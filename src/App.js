@@ -12,7 +12,7 @@ const reducer = (state,action) => {
 
 export default function App() {
     let [{a},dispatch] = useReducer(reducer, {a: 0})
-    console.log(a)
+    console.log(a);
 
   return (
 
