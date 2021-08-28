@@ -4,7 +4,7 @@ import {fetchUsers} from "./servis/users.service";
 
 
 export default function App() {
-    let state = useSelector(state => state)
+    let state = useSelector(state => state);
     let {users}= state
     let dispatch = useDispatch()
      useEffect(()=>{
