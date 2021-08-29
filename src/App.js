@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {fetchUsers} from "./servis/users.service";
+import {useEffect, useState} from "react";
+import {addUser, fetchUsers} from "./servis/users.service";
 
 
 export default function App() {
@@ -12,9 +12,37 @@ export default function App() {
              dispatch({type:'Fetch_Users',payload:value})
          })
      },[])
+
+let onSubmitForm = (e) => {
+     e.preventDefault()
+    let name = e.target.name.value
+    let user = {name}
+    addUser(user).then(value => {
+        dispatch({type:'Push_Users',payload:value})
+    })
+
+
+
+    }
+    //
+    // let [form,setForm] = useState({name: 'name'})
+    //
+    //
+    // const onChange = (e) => {
+    //   setForm({...form,[e.target.name]:e.target.value})
+    // }
+
     return (
 
+
        <div>
+
+           <form onSubmit={onSubmitForm}>
+               <input type="text" name={'name'}  />
+               {/*value={form.name} onChange={onChange}*/}
+               <button>addUser</button>
+           </form>
+
            {
                users.map(value =><div>{value.name}</div>)
            }

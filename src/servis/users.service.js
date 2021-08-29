@@ -4,4 +4,18 @@ const fetchUsers = () => {
         .then(value => value.json())
 
 }
-export {fetchUsers}
+
+const addUser = (user) => {
+
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then(value => value.json())
+}
+
+
+export {fetchUsers,addUser}

@@ -15,6 +15,9 @@ const rootReducer = (state = initialstate,action) => {
    switch (action.type){
        case 'Fetch_Users':
            return {...state,users:[...action.payload]}
+       case 'Push_Users':
+           return {...state,users:[...state.users,action.payload]}
+
        default:
          return  state
    }
