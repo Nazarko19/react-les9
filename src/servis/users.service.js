@@ -14,7 +14,8 @@ const addUser = (user) => {
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
-        .then(value => value.json())
+        .then((response) => response.json())
+        .then((json) => console.log(json));
 }
 
 
