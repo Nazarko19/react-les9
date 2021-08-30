@@ -15,7 +15,7 @@ const rootReducer = (state = initialstate,action) => {
    switch (action.type){
        case 'Fetch_Users':
            return {...state,users:[...action.payload]}
-       case 'Push_Users':
+       case 'Push_User':
            return {...state,users:[...state.users,action.payload]}
 
        default:
@@ -23,7 +23,7 @@ const rootReducer = (state = initialstate,action) => {
    }
 }
 
-let store = createStore(rootReducer)
+ export let store = createStore(rootReducer)
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>

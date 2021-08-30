@@ -13,24 +13,27 @@ export default function App() {
          })
      },[])
 
-let onSubmitForm = (e) => {
+
+
+
+
+
+    let [form,setForm] = useState({name: 'name'})
+
+
+    let onSubmitForm = (e) => {
      e.preventDefault()
-    let name = e.target.name.value
-    let user = {name}
-    addUser(user).then(value => {
-        dispatch({type:'Push_Users',payload:value})
+    addUser(form).then(value => {
+        dispatch({type: 'Push_User',payload:value})
     })
-
-
-
     }
-    //
-    // let [form,setForm] = useState({name: 'name'})
-    //
-    //
-    // const onChange = (e) => {
-    //   setForm({...form,[e.target.name]:e.target.value})
-    // }
+
+
+
+
+    const onChange = (e) => {
+      setForm({...form,[e.target.name]:e.target.value})
+    }
 
     return (
 
@@ -38,8 +41,7 @@ let onSubmitForm = (e) => {
        <div>
 
            <form onSubmit={onSubmitForm}>
-               <input type="text" name={'name'}  />
-               {/*value={form.name} onChange={onChange}*/}
+               <input type="text" name={'name'} value={form.name} onChange={onChange} />
                <button>addUser</button>
            </form>
 

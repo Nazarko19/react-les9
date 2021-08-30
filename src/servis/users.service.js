@@ -5,11 +5,11 @@ const fetchUsers = () => {
 
 }
 
-const addUser = (user) => {
+const addUser = ({name}) => {
 
-    fetch(url, {
+  return  fetch(url, {
         method: 'POST',
-        body: JSON.stringify(user),
+        body: JSON.stringify({name}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
